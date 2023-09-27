@@ -11,7 +11,7 @@ int main() {
 	double commission_Rate;
 	double sales_Amount;
 	double commissions_Made;
-	int commission_Percent;
+	double commission_Percent;
 
 	cout << "What is your sales amount?\n";
 	cin >> sales_Amount;
@@ -20,16 +20,17 @@ int main() {
 	cout << setprecision(2) << fixed;
 
 	if (sales_Amount <= 10000) {
-		commission_Rate = .10;
+		commission_Rate = .1;
 		commissions_Made = sales_Amount * commission_Rate;
 	}
 
 	else if (sales_Amount > 15000) {
-		commission_Rate = .20;
+		commission_Rate = .2;
 		commissions_Made = sales_Amount * commission_Rate;
 	}
 
-	else if (sales_Amount < 15000 && sales_Amount > 10000) {
+	else if (sales_Amount <= 15000 &&
+		sales_Amount > 10000) {
 		commission_Rate = .15;
 		commissions_Made = sales_Amount * commission_Rate;
 	}
